@@ -1,0 +1,16 @@
+#!/bin/bash
+echo '#!/bin/bash' > backuptool
+
+echo -e "Choose which drive you would like to back up."
+
+read directory
+dir
+ls
+echo -e "Choose which drive you would like to back up."
+
+fdisk -l /dev/sdb1/ /dev/scd0 /dev/sr0 /dev/sda1 /dev/sdb /dev/
+
+
+dd if=/dev/sdb  of=/dev/sda
+
+chmod +x backuptool
